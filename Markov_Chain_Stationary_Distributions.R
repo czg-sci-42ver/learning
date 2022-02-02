@@ -1,11 +1,11 @@
-library(errorist)
+# library(errorist)
 
 library(vscDebugger)
 ## .vsc.attach()
 
 library(languageserver)
 library(lintr)
-remotes::install_github("cran/expm")
+# remotes::install_github("cran/expm")
 
 library(expm) # used to compute matrix power
 

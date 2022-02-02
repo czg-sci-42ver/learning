@@ -1,0 +1,27 @@
+# https://www.gnu.org/software/bash/manual/html_node/Sample-Init-File.html#Sample-Init-File
+# man bash
+#
+# also can try https://github.com/hewigovens/vim-config/blob/master/.inputrc
+#
+$include /etc/inputrc
+
+set editing-mode vi
+set keymap vi-command
+
+"\C-p":previous-history
+"\C-n":next-history
+"\C-r":reverse-search-history
+"\C-s":forward-search-history
+"\C-l":clear-screen
+
+
+set colored-stats On
+set completion-ignore-case On
+set completion-prefix-display-length 3
+set mark-symlinked-directories On
+set show-all-if-ambiguous On
+set show-all-if-unmodified On
+set visible-stats On
+
+#Control-j: menu-complete
+#Control-k: menu-complete-backward
