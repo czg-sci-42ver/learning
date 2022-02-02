@@ -12,7 +12,7 @@
 
 # ~/.Rprofile
 > really important to enable **workspace** show results not using vscode command `R: create new terminal` 
-> > [.Rprofile source init.R](https://github.com/REditorSupport/vscode-R/issues/355)
+> > [.Rprofile source init.R in the vscode-R dir](https://github.com/REditorSupport/vscode-R/issues/355)
 > > 
 > > so we can use **tmux** to attach Session
 ```bash

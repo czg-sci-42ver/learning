@@ -6,7 +6,7 @@ library(vscDebugger)
 library(languageserver)
 library(lintr)
 # remotes::install_github("cran/expm")
-
+local()
 library(expm) # used to compute matrix power
 
 p <- t(matrix(c(
