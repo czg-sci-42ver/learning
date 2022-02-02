@@ -24,3 +24,17 @@
   - Failed to run diagnostics: callr subprocess failed: Malformed config file, ensure it ends in a newline   missing value where TRUE/FALSE needed
     - not use `true` or `false` casually
     - not necessary to have newline at the end of the file
+## packages used inside **must be installed appropriately** because it may not emit errors if it not installed
+### so vscode may **crash** but R console doesn‘t
+## R **history** saving has a lot of problems
+- in radian `Error in .External2(C_savehistory, file) : no history available to save`
+- in R `Warning message:
+problem in saving the history file '~/.Rhistory' `
+
+## **Rstudio** may be not able to run parallelly with vscode
+
+## you may must place a `globalenv.json` to vmake`.vscode-R/globalenv.json` to avoid error `vscode-R/globalenv.json': No such file or directory`
+- otherwise the **vscode-R plugins** may not work
+
+## must use interactive R to enable workspace
+["R: Create R terminal"](https://github.com/REditorSupport/vscode-R/issues/879)
