@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../automatic_command/init_ubuntu/R_code"
+		}
+	],
+	"settings": {}
+}
