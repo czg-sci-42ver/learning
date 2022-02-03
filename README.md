@@ -51,3 +51,4 @@ problem in saving the history file '~/.Rhistory' `
 
 # Rmarkdown
 > may be need to run `rmarkdown::run("~/R_code/sampling/markov.Rmd")` twice
+> > just `vscode-R` extension is enough by seeing [github README](https://github.com/REditorSupport/vscode-R)

@@ -83,6 +83,7 @@ rvec%*%diag(lam)%*%lvec
 lam 
 ```
 We see the first eigenvalue is $1$ and so the first left eigenvector, suitably normalized, should contain the stationary distribution:
+> this is to normalize 
 ```{r}
 pi_eig<-lvec[1,]/sum(lvec[1,])
 pi_eig

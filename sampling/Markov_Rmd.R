@@ -10,6 +10,8 @@ twosam <- function(y1, y2) {
     tst
 }
 
+
+
 group1 <- rnorm(100)
 group2 <- rnorm(100, mean = .1)
 
