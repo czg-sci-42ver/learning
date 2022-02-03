@@ -9,9 +9,9 @@ dir_init <- getwd()
 init_first <- function() {
   # return early if not a vscode term session
   if (
-    !interactive()
-    || Sys.getenv("RSTUDIO") != ""
-    || Sys.getenv("TERM_PROGRAM") != "vscode"
+    !interactive() ||
+      Sys.getenv("RSTUDIO") != "" ||
+      Sys.getenv("TERM_PROGRAM") != "vscode"
   ) {
     return()
   }
@@ -20,7 +20,9 @@ init_first <- function() {
   required_packages <- c("jsonlite", "rlang")
   missing_packages <- required_packages[
     !vapply(required_packages, requireNamespace,
-      logical(1L), quietly = TRUE)
+      logical(1L),
+      quietly = TRUE
+    )
   ]
 
   if (length(missing_packages)) {

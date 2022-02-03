@@ -43,8 +43,6 @@ load_settings <- function() {
     message("Error occurs when reading VS Code settings: ", conditionMessage(e))
   })
 
-  vsc_settings
-
   if (is.null(vsc_settings)) {
     return(FALSE)
   }
