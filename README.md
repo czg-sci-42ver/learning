@@ -15,6 +15,12 @@
 > > [.Rprofile source init.R in the vscode-R dir](https://github.com/REditorSupport/vscode-R/issues/355)
 > > 
 > > so we can use **tmux** to attach Session
+> >
+> > > which also solve the `globalenv` problem
+> > > 
+> > > ```json
+> > > "allowGlobalDebugging": true,
+> > > ```
 ```bash
 \cp ~/.Rprofile ~/automatic_command/init_ubuntu/R_code/config/
 ```
@@ -42,3 +48,6 @@ problem in saving the history file '~/.Rhistory' `
 
 ## must use interactive R to enable workspace
 ["R: Create R terminal"](https://github.com/REditorSupport/vscode-R/issues/879)
+
+# Rmarkdown
+> may be need to run `rmarkdown::run("~/R_code/sampling/markov.Rmd")` twice

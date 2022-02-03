@@ -10,7 +10,8 @@
             "request": "launch",
             "debugMode": "workspace",
             "workingDirectory": "${workspaceFolder}",
-            // "allowGlobalDebugging": true
+            "allowGlobalDebugging": true,
+            // "debugServer": 4711            
         },
         {
             "type": "R-Debugger",

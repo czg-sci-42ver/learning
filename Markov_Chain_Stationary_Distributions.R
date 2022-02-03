@@ -1,3 +1,5 @@
+# https://stephens999.github.io/fiveMinuteStats/markov_chains_discrete_stationary_dist.html
+
 # library(errorist)
 
 library(vscDebugger)
@@ -6,7 +8,9 @@ library(vscDebugger)
 library(languageserver)
 library(lintr)
 # remotes::install_github("cran/expm")
-local()
+
+# local()
+
 library(expm) # used to compute matrix power
 
 p <- t(matrix(c(
@@ -37,3 +41,13 @@ lam <- r$values
 # Two ways of checking the spectral decomposition:
 ## Standard definition
 rvec %*% diag(lam) %*% ginv(rvec)
+
+
+## With left eigenvectors (trivial chang)
+rvec %*% diag(lam) %*% lvec
+
+lam
+
+########### normalization
+pi_eig <- lvec[1, ] / sum(lvec[1, ])
+pi_eig

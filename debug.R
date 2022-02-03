@@ -17,3 +17,14 @@ browser()
 ## 有 n where 等命令
 options(error = recover)
 f("x")
+
+#################
+f <- function() g()
+g <- function() message("Hi!")
+f()
+#> Hi!
+
+rlang::with_abort(f(), "message")
+#> Error: Hi!
+rlang::last_trace()
+#> Error: Can't show last error because no error was recorded yet

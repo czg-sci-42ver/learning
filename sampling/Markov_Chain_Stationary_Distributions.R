@@ -1,10 +1,13 @@
-library(errorist)
+# debug()
+# trace()
+# library(errorist)
 
 library(vscDebugger)
 ## .vsc.attach()
 
 library(languageserver)
 library(lintr)
+
 # remotes::install_github("cran/expm")
 
 library(expm) # used to compute matrix power
@@ -27,8 +30,13 @@ pi_bru
 pi_bru - pi_bru %*% p
 
 library(MASS)
+debugonce(devtools::install)
 # Get the eigenvectors of p, note: R returns right eigenvectors
 r <- eigen(p)
+
+####################### this  may temporarily suppress workspace update
+# browser()
+
 rvec <- r$vectors
 # left eigenvectors are the inverse of the right eigenvectors
 lvec <- ginv(r$vectors)
