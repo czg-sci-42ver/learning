@@ -11,13 +11,18 @@ twosam <- function(y1, y2) {
 }
 
 
-
 group1 <- rnorm(100)
 group2 <- rnorm(100, mean = .1)
-
+View(mtcars)
 test <- twosam(group1, group2)
 test2 <- t.test(group1, group2)
 
+lst <- list(
+    list(id = 1, x = rnorm(45)),
+    list(id = 1, x = rnorm(45))
+)
+
+shiny::runExample("01_hello")
 # cmd <- 'bash -c ". ~/R_code/bind.bash"'
 # cat(cmd)
 # system(cmd)

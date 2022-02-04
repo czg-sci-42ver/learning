@@ -34,6 +34,8 @@ debugonce(devtools::install)
 # Get the eigenvectors of p, note: R returns right eigenvectors
 r <- eigen(p)
 
+# plot(mtcars)
+
 ####################### this  may temporarily suppress workspace update
 # browser()
 

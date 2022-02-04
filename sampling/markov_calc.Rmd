@@ -6,6 +6,7 @@ date: 2016-01-31
 
 
 
+
 ```{r}
 library(expm) # used to compute matrix power
 ```
@@ -30,18 +31,17 @@ Not all Morkov chains have a stationary distribution but for some classes of pro
 In Sheldon Ross's Introduction to Probability Models, he has an example (4.3) of a Markov Chain for modeling Gary's mood.  Gary alternates between 3 state: Cheery ($X=1$), So-So ($X=2$), or Glum ($X=3$).  Here we input the $P$ matrix given by Ross and we input an abitrary initial probability matrix. 
 
 ```{r}
-# Define prob transition matrix 
+# Define prob transition matrix
 # (note matrix() takes vectors in column form so there is a transpose here to switch col's to row's)
-P=t(matrix(c(c(0.5,0.4,0.1),c(0.3,0.4,0.3),c(0.2,0.3,0.5)),nrow=3))
+P <- t(matrix(c(c(0.5, 0.4, 0.1), c(0.3, 0.4, 0.3), c(0.2, 0.3, 0.5)), nrow = 3))
 # Check sum across = 1
-apply(P,1,sum)  
+apply(P, 1, sum)
 
 # Definte initial probability vector
-x0=c(0.1,0.2,0.7)
+x0 <- c(0.1, 0.2, 0.7)
 # Check sums to 1
 sum(x0)
 ```
-
 
 # Solving for stationary distributions 
 The stationary distribution has the property $\pi^T= \pi^T P$
@@ -51,13 +51,13 @@ The stationary distribution has the property $\pi^T= \pi^T P$
 A brute-force hack to finding the stationary distribution is simply to take the transition matrix to a high power and then extract out any row. 
 
 ```{r}
-pi_bru <- (P %^% 100)[1,]
+pi_bru <- (P %^% 100)[1, ]
 pi_bru
 ```
 
 We can test if the resulting vector is a stationary distribution by assessing if the resulting vector statisfies $\pi^{T}=\pi^{T}P$ (i.e. $\pi^{T}-\pi^{T}P  = 0$).
 ```{r}
-pi_bru - pi_bru%*%P
+pi_bru - pi_bru %*% P
 ```
 As we can see up to some very small errors, for this example, our numerical solution checks out.
 
@@ -68,24 +68,24 @@ Note that the equation $\pi^T P=\pi^T$ implies that the vector $\pi$ is a left e
 ```{r}
 library(MASS)
 # Get the eigenvectors of P, note: R returns right eigenvectors
-r=eigen(P)
-rvec=r$vectors
+r <- eigen(P)
+rvec <- r$vectors
 # left eigenvectors are the inverse of the right eigenvectors
-lvec=ginv(r$vectors)
+lvec <- ginv(r$vectors)
 # The eigenvalues
-lam<-r$values
+lam <- r$values
 # Two ways of checking the spectral decomposition:
 ## Standard definition
-rvec%*%diag(lam)%*%ginv(rvec)
+rvec %*% diag(lam) %*% ginv(rvec)
 ## With left eigenvectors (trivial chang)
-rvec%*%diag(lam)%*%lvec
+rvec %*% diag(lam) %*% lvec
 
-lam 
+lam
 ```
 We see the first eigenvalue is $1$ and so the first left eigenvector, suitably normalized, should contain the stationary distribution:
 > this is to normalize 
 ```{r}
-pi_eig<-lvec[1,]/sum(lvec[1,])
+pi_eig <- lvec[1, ] / sum(lvec[1, ])
 pi_eig
 sum(pi_eig)
 pi_eig %*% P
@@ -94,12 +94,12 @@ And we see the procedure checks out.
 
 As a side-note: We can also obtain the left eigenvectors as the transposes of the right eigenvectors of t(P) 
 ```{r}
-r<-eigen(t(P))
-V<-r$vectors
-lam<-r$values
-V%*%diag(lam)%*%ginv(V)
-# Note how we are pulling columns here. 
-pi_eig2 <- V[,1]/sum(V[,1])
+r <- eigen(t(P))
+V <- r$vectors
+lam <- r$values
+V %*% diag(lam) %*% ginv(V)
+# Note how we are pulling columns here.
+pi_eig2 <- V[, 1] / sum(V[, 1])
 ```
 
 ## Rate of approach to the stationary distribution
@@ -111,7 +111,7 @@ This is easiest seen by recalling the eigendecomposition of $P^n$ can be written
 
 For our example, $1/\lambda_2$ is approximately 3 generations.
 ```{r}
-1/lam[2]
+1 / lam[2]
 ```
 Which implies we will reach equilibrium fairly quickly - much more quickly than the 100 generations we were using for our brute-force soluton to the stationary distribution. As a test, let's see how $P^12$ (i.e approx $4/\lambda_2$) looks: 
 ```{r}
@@ -123,12 +123,11 @@ Indeed - Gary's mood will return to its stationary distribution relatively quick
 
 Thanks to the eigenvector decomposition, to obtain the matrix power $P^n$ we just need to take the powers of the eigenvalues.  Compare the following lines of code to $P$,$P^2$, $P^100$ computed above.  And note - this is much faster than naively doing the matrix multipliation over and over to obtain the powers.
 ```{r}
-rvec%*%diag(lam)%*%lvec
+rvec %*% diag(lam) %*% lvec
 
-rvec%*%diag(lam^2)%*%lvec
+rvec %*% diag(lam^2) %*% lvec
 
-rvec%*%diag(lam^100)%*%lvec
-
+rvec %*% diag(lam^100) %*% lvec
 ```
 
 ## Miscellaneous : Solving a system of linear equations solution
@@ -136,16 +135,16 @@ rvec%*%diag(lam^100)%*%lvec
 Another approach is to solve the system of linear equations $\pi^{T}=\pi^{T}P$.  These equations are known as the global balance equations, and this approach is introduced in [Discrete Markov Chains: Finding the Stationary Distribution via solution of the global balance equations](stationary_distribution.html).  We include it here for comparison to the eigendecomposition approach on the same example. 
 
 ```{R}
-K<-3
-A_basic <- t(diag(rep(1,K))-P)
-b_basic <- rep(0,K)
+K <- 3
+A_basic <- t(diag(rep(1, K)) - P)
+b_basic <- rep(0, K)
 
-# Now add the constraint 
-A_constr <- rbind(A_basic,rep(1,K))
-b_constr <- c(b_basic,1)
+# Now add the constraint
+A_constr <- rbind(A_basic, rep(1, K))
+b_constr <- c(b_basic, 1)
 
-pi_lineq <- t(solve(t(A_constr)%*%A_constr,t(A_constr)%*%b_constr))
-pi_lineq%*%P
+pi_lineq <- t(solve(t(A_constr) %*% A_constr, t(A_constr) %*% b_constr))
+pi_lineq %*% P
 ```
 And the solution checks out!
 

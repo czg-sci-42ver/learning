@@ -1,3 +1,4 @@
+# see [](https://github.com/REditorSupport/vscode-R/wiki/R-Language-Service) for more `vscode-R` fantastic features
 # .lintr
 - put in ～ or workspace
 - don't exists unvalid configs （e.g. empty `.lintr`）
@@ -52,3 +53,15 @@ problem in saving the history file '~/.Rhistory' `
 # Rmarkdown
 > may be need to run `rmarkdown::run("~/R_code/sampling/markov.Rmd")` twice
 > > just `vscode-R` extension is enough by seeing [github README](https://github.com/REditorSupport/vscode-R)
+
+> don‘t use `R tools ` extension which conflicts with `vscode-R`
+> > which may need disable and then enable `vscode-R` vto enable `Rmarkdown support`.
+> 
+
+> don‘t add too many extensions
+
+
+> use the correct **language mode** to enable Rmarkdown **features**
+> > notice the **status bar**changes
+
+## the `./issue.md` also helps

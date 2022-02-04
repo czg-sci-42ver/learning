@@ -1,0 +1,12 @@
+[Extension Host] Start language server for file:///home/czg/R_code/sampling/markov_shiny_bug.Rmd
+workbench.desktop.main.js:77 [Extension Host] R path: /usr/bin/R
+workbench.desktop.main.js:77 [Extension Host] LANG: en_US.UTF-8
+workbench.desktop.main.js:77 [Extension Host] Process 53115 spawned
+workbench.desktop.main.js:77 [Extension Host] Process 53138 spawned
+workbench.desktop.main.js:77 [Extension Host] R process connected
+workbench.desktop.main.js:77 [Extension Host] [LiveSessionListener] started
+workbench.desktop.main.js:77 [Extension Host] Initialize session watcher
+workbench.desktop.main.js:77 [Extension Host] [deploySessionWatcher] extensionPath: /home/czg/.vscode/extensions/ikuyadeu.r-2.3.6
+workbench.desktop.main.js:77 [Extension Host] Create sessionStatusBarItem
+workbench.desktop.main.js:77 [Extension Host] [startRequestWatcher] Starting
+workbench.desktop.main.js:77 [Extension Host] [startRequestWatcher] Done
