@@ -1,0 +1,27 @@
+---
+title: "Python code chunks in R Markdown"
+date: 2018-02-22
+---
+```{r}
+library(reticulate)
+
+Sys.setenv(LD_LIBRARY_PATH = paste0(Sys.getenv("HOME"), "/.virtualenvs/vsc/lib"))
+
+Sys.getenv("LD_LIBRARY_PATH")
+use_virtualenv("/home/czg/.virtualenvs/vsc", required = TRUE)
+
+py_config()
+
+matplotlib <- import("matplotlib")
+matplotlib$use("Agg", force = TRUE)
+
+# import matplotlib.pyplot as plt
+```
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+t = np.arange(0.0, 2.0, 0.01)
+s = 1 + np.sin(2*np.pi*t)
+plt.plot(t,s)
+```

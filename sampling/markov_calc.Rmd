@@ -2,10 +2,61 @@
 title: "Computing Stationary Distributions of a Discrete Markov Chain"
 author: "John Novembre, with edits by Matthew Stephens"
 date: 2016-01-31
+
+output:
+#   pdf_document:
+#     citation_package: natbib
+#     # keep_tex: yes
+#     number_sections: yes
+  
+#   html_notebook: default
+    
+    # html_fragment
+
+  html_document:
+    # df_print: kable
+
+    df_print: !expr pander::pander 
+    # code_folding: hide
+    mathjax: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js"
+    self_contained: false
+    keep_md: true
+    
+    pandoc_args: [
+      "--title-prefix", "Foo",
+      "--id-prefix", "Bar"
+    ]
+
+    md_extensions: -autolink_bare_uris+hard_line_breaks
+
+    # includes:
+    #   in_header: header.html
+    #   before_body: doc_prefix.html
+    #   after_body: doc_suffix.html
+    
+    ############### may output repeated cache file
+    # lib_dir: libs
+    
+    
+    ################# may not render data frame
+    # df_print: paged 
+
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+    number_sections: true
+    theme: united
+    highlight: tango
+    css: styles.css
+    fig_width: 4
+    fig_height: 6
+    fig_caption: true
+
 ---
 
 
-
+> from https://github.com/Accio/fiveMinuteStats/tree/fc5fe81e27aa3e1dbfcf4d8a4db69fc8088fa683
 
 ```{r}
 library(expm) # used to compute matrix power
@@ -93,13 +144,18 @@ pi_eig %*% P
 And we see the procedure checks out.  
 
 As a side-note: We can also obtain the left eigenvectors as the transposes of the right eigenvectors of t(P) 
+
+> also see `inverse_mat.ipynb` in `python branch`
 ```{r}
 r <- eigen(t(P))
 V <- r$vectors
+V
 lam <- r$values
+lam
 V %*% diag(lam) %*% ginv(V)
 # Note how we are pulling columns here.
 pi_eig2 <- V[, 1] / sum(V[, 1])
+pi_eig2
 ```
 
 ## Rate of approach to the stationary distribution
@@ -110,12 +166,24 @@ This is easiest seen by recalling the eigendecomposition of $P^n$ can be written
 
 
 For our example, $1/\lambda_2$ is approximately 3 generations.
+
+> see `plot.ipynb` in python branch
 ```{r}
+lam[2]
+lam[3]
 1 / lam[2]
+lam[2]**(1 / lam[2])
 ```
 Which implies we will reach equilibrium fairly quickly - much more quickly than the 100 generations we were using for our brute-force soluton to the stationary distribution. As a test, let's see how $P^12$ (i.e approx $4/\lambda_2$) looks: 
 ```{r}
-P^12
+# P^100
+# P
+# P[1, 1]^100
+P %^% 100
+# P^12 # like matlab .^
+# P^3
+P %^% 12
+P %^% 3
 ```
 Indeed - Gary's mood will return to its stationary distribution relatively quickly after any perturbation! 
 
@@ -137,16 +205,28 @@ Another approach is to solve the system of linear equations $\pi^{T}=\pi^{T}P$. 
 ```{R}
 K <- 3
 A_basic <- t(diag(rep(1, K)) - P)
+diag(rep(1, K))
+A_basic
 b_basic <- rep(0, K)
-
+b_basic
 # Now add the constraint
 A_constr <- rbind(A_basic, rep(1, K))
+A_constr
+t(A_constr)
 b_constr <- c(b_basic, 1)
-
+b_constr
+qr
 pi_lineq <- t(solve(t(A_constr) %*% A_constr, t(A_constr) %*% b_constr))
+t(A_constr)
+t(A_constr) %*% A_constr
+A_basic %*% A_basic
+# t(A_constr) %*% t(A_constr)
+# A_constr %*% A_constr
+t(A_constr) %*% b_constr
 pi_lineq %*% P
+pi_lineq
 ```
 And the solution checks out!
 
-
+> ? t(solve(t(A_constr)%*%A_constr,t(A_constr)%*%b_constr))
 

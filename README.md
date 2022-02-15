@@ -1,4 +1,27 @@
-# see [](https://github.com/REditorSupport/vscode-R/wiki/R-Language-Service) for more `vscode-R` fantastic features
+- [see vscode R official for more `vscode-R` fantastic features](#see-vscode-r-official-for-more-vscode-r-fantastic-features)
+- [renv may not behave like python virtualenv to activate any where](#renv-may-not-behave-like-python-virtualenv-to-activate-any-where)
+- [init see automatic_command/init_ubuntu/R_code/ in automatic command repository](#init-see-automatic_commandinit_ubuntur_code-in-automatic-command-repository)
+- [.lintr](#lintr)
+  - [recommended example (nicer than the lintr github official example)](#recommended-example-nicer-than-the-lintr-github-official-example)
+  - [recommended tutorial](#recommended-tutorial)
+  - [environment](#environment)
+- [~/.Rprofile](#rprofile)
+  - [packages used inside **must be installed appropriately** because it may not emit errors if it not installed](#packages-used-inside-must-be-installed-appropriately-because-it-may-not-emit-errors-if-it-not-installed)
+    - [so vscode may **crash** but R console doesn‘t](#so-vscode-may-crash-but-r-console-doesnt)
+  - [R **history** saving has a lot of problems](#r-history-saving-has-a-lot-of-problems)
+  - [**Rstudio** may be not able to run parallelly with vscode](#rstudio-may-be-not-able-to-run-parallelly-with-vscode)
+  - [you may must place a `globalenv.json` to vmake`.vscode-R/globalenv.json` to avoid error `vscode-R/globalenv.json': No such file or directory`](#you-may-must-place-a-globalenvjson-to-vmakevscode-rglobalenvjson-to-avoid-error-vscode-rglobalenvjson-no-such-file-or-directory)
+  - [must use interactive R to enable workspace](#must-use-interactive-r-to-enable-workspace)
+- [Rmarkdown](#rmarkdown)
+  - [the `./issue.md` also helps](#the-issuemd-also-helps)
+  - [use `knitr::knit_engines$set(python` to enable python venv](#use-knitrknit_enginessetpython-to-enable-python-venv)
+- [debug](#debug)
+  - [`settings.json`](#settingsjson)
+# see [vscode R official](https://github.com/REditorSupport/vscode-R/wiki/R-Language-Service) for more `vscode-R` fantastic features
+
+# renv may not behave like python virtualenv to activate any where
+
+# init see [automatic_command/init_ubuntu/R_code/ in automatic command repository]()
 # .lintr
 - put in ～ or workspace
 - don't exists unvalid configs （e.g. empty `.lintr`）
@@ -63,5 +86,31 @@ problem in saving the history file '~/.Rhistory' `
 
 > use the correct **language mode** to enable Rmarkdown **features**
 > > notice the **status bar**changes
+> 
+> also can be configured in the `settings.json`
+>  ```json
+>     "files.associations": {
+>        "*.json": "jsonc",
+>        "*.rmd": "markdown",
+>        "*.Rmd": "rmd"
+>    },
+>  ``` 
 
 ## the `./issue.md` also helps
+
+## use `knitr::knit_engines$set(python` to enable python venv
+https://bookdown.org/yihui/rmarkdown-cookbook/custom-engine.html
+# debug
+## `settings.json`
+> see from **vscode-R plugin** github wiki 
+```json
+"r.alwaysUseActiveTerminal": true,
+```
+run in the terminal
+```bash
+tmux # vscode
+r # alias of radian in the bashrc
+
+######## another terminal
+tmux attach-session -t 0 # size determined by the smaller one
+```

@@ -1,0 +1,117 @@
+
+---
+title: "Computing Stationary Distributions of a Discrete Markov Chain"
+author: "John Novembre, with edits by Matthew Stephens"
+date: 2016-01-31
+
+output:
+    
+    
+
+  html_document:
+
+    df_print: !expr pander::pander 
+    mathjax: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js"
+    self_contained: false
+    keep_md: true
+    
+    pandoc_args: [
+      "--title-prefix", "Foo",
+      "--id-prefix", "Bar"
+    ]
+
+    md_extensions: -autolink_bare_uris+hard_line_breaks
+
+
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+    number_sections: true
+    theme: united
+    highlight: tango
+    css: styles.css
+    fig_width: 40
+    fig_height: 6
+    fig_caption: true
+
+---
+> https://bookdown.org/yihui/rmarkdown-cookbook/fig-chunk.html
+```{r cars-plot, fig.show='hide'}
+plot(cars)
+```
+
+{{< figure src="`r knitr::fig_chunk('cars-plot', 'png')`" >}}
+
+[see](https://courses.wccnet.edu/~palay/math160r/prob_chisq.htm)
+```{r}
+library(httpgd)
+x <- seq(0, 40, length = 200)
+x
+hx <- rep(0, 200)
+# hx <- seq(0, 40, length = 200)
+hx
+
+degf <- c(1, 2, 4, 8, 16, 32)
+colors <- c("red", "orange", "green", "blue", "black", "violet")
+labels <- c("df=1", "df=2", "df=4", "df=8", "df=16", "df=32")
+
+plot(x, hx,
+    type = "n", lty = 2, lwd = 2, xlab = "x value",
+    ylab = "Density", ylim = c(0, 0.7), xlim = c(0, 40), las = 1,
+    xaxp = c(0, 40, 10),
+    main = "Chi-Squared Distribution \n 1, 2, 4, 8, 16, 32 Degrees of Freedom"
+)
+```
+
+```{r}
+# plot.new()
+plot(1:10)
+plot.new()
+# dev.new(width = 10, height = 4)
+# plot.new()
+library(graphics)
+for (i in 1:6) {
+    # plot.xy(xy.coords(x, dchisq(x, degf[i])))
+    # plot.xy(xy.coords(x, dchisq(x, degf[i])), lwd = 5, col = colors[i], lty = 1)
+    lines(x, dchisq(x, degf[i]), lwd = 5, col = colors[i], lty = 1)
+    # use in R , render unsuccessfully in Rmd
+    print(i)
+    print(colors[i])
+}
+```
+
+```{r}
+plot.new()
+abline(h = 0)
+abline(h = seq(0.1, 0.7, 0.1), lty = 3, col = "darkgray")
+abline(v = 0)
+abline(v = seq(2, 40, 2), lty = 3, col = "darkgray")
+legend("topright",
+    inset = .05, title = "Degrees of Freedom",
+    labels, lwd = 2, lty = 1, col = colors
+)
+```
+
+```{r}
+for (j in 1:6) {
+    plot(x, hx,
+        type = "n", lty = 2, lwd = 2, xlab = "x value",
+        ylab = "Density", ylim = c(0, 0.7), xlim = c(0, 40), las = 1,
+        xaxp = c(0, 40, 10),
+        main = paste("Chi-Squared Distribution:", degf[j], " Degrees of Freedom")
+    )
+
+    for (i in j:j) {
+        lines(x, dchisq(x, degf[i]), lwd = 2, col = colors[i], lty = 1)
+    }
+    abline(h = 0)
+    abline(h = seq(0.1, 0.7, 0.1), lty = 3, col = "darkgray")
+    abline(v = 0)
+    abline(v = seq(2, 40, 2), lty = 3, col = "darkgray")
+    legend("topright",
+        inset = .05, title = "Degrees of Freedom",
+        labels[j], lwd = 2, lty = 1, col = colors[j]
+    )
+}
+```
