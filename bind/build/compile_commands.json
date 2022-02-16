@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/czg/cpp_learning/bind/build",
+  "command": "/usr/bin/c++    -Wall -Wextra -O3   -std=gnu++17 -o CMakeFiles/bind.dir/src/bind.cpp.o -c /home/czg/cpp_learning/bind/src/bind.cpp",
+  "file": "/home/czg/cpp_learning/bind/src/bind.cpp"
+}
+]
