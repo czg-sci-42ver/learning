@@ -1,3 +1,6 @@
-/home/czg/cpp_learning/static/build/CMakeFiles/edit_cache.dir
-/home/czg/cpp_learning/static/build/CMakeFiles/rebuild_cache.dir
-/home/czg/cpp_learning/static/build/CMakeFiles/bind.dir
+/home/czg/cpp_c_learning/static/build/CMakeFiles/edit_cache.dir
+/home/czg/cpp_c_learning/static/build/CMakeFiles/bind_3.dir
+/home/czg/cpp_c_learning/static/build/CMakeFiles/bind_2.dir
+/home/czg/cpp_c_learning/static/build/CMakeFiles/bind_1.dir
+/home/czg/cpp_c_learning/static/build/CMakeFiles/rebuild_cache.dir
+/home/czg/cpp_c_learning/static/build/CMakeFiles/bind.dir

@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
- 
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Feb  8 13:32:46 2022
+# Make data base, printed on Wed Feb 16 10:09:34 2022
 
 # Variables
 
@@ -22,6 +20,8 @@ GNUMAKEFLAGS :=
 PAPERSIZE = letter
 # environment
 DESKTOP_SESSION = ubuntu
+# environment
+RCUTILS_LOGGING_BUFFERED_STREAM = 1
 # default
 .SHELLFLAGS := -c
 # environment
@@ -41,7 +41,7 @@ GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /home/czg/cpp_learning
+CURDIR := /home/czg/cpp_c_learning
 # makefile
 SHELL = /bin/sh
 # environment
@@ -49,11 +49,13 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:70780
+JOURNAL_STREAM = 8:62890
 # environment
 _colcon_cd_root = /opt/ros/rolling/
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# environment
+RCUTILS_LOGGING_USE_STDOUT = 1
 # makefile
 MAKEFILE_LIST := 
 # automatic
@@ -77,7 +79,7 @@ _ = /usr/bin/code
 # environment
 LC_CTYPE = en_US.UTF-8
 # environment
-MANAGERPID = 1093
+MANAGERPID = 1020
 # environment
 TURTLEBOT3_MODEL = waffle
 # environment
@@ -101,7 +103,7 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 LSCOLORS = Gxfxcxdxdxegedabagacad
 # environment
-SESSION_MANAGER = local/czg-Lenovo-Legion-R7000-2020:@/tmp/.ICE-unix/1437,unix/czg-Lenovo-Legion-R7000-2020:/tmp/.ICE-unix/1437
+SESSION_MANAGER = local/czg-Lenovo-Legion-R7000-2020:@/tmp/.ICE-unix/1282,unix/czg-Lenovo-Legion-R7000-2020:/tmp/.ICE-unix/1282
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -113,7 +115,7 @@ VSCODE_LOG_STACK = false
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=36e3d8d0-2b68-4d2a-8cde-6c8e7fc972ea&iid=36e3d8d0-2b68-4d2a-8cde-6c8e7fc972ea&sid=36e3d8d0-2b68-4d2a-8cde-6c8e7fc972ea","uploadToServer":true}
 # environment
-INVOCATION_ID = e6b0e102c50544bab943bb492d3c99b1
+INVOCATION_ID = dc85ae24d6be428a8ad078fdf5d46dd9
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -125,13 +127,13 @@ SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = :0
+RCUTILS_COLORIZED_OUTPUT = 1
 # environment
-TMUX_PANE = %1
+DISPLAY = :0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/czg/cpp_learning
+PWD = /home/czg/cpp_c_learning
 # environment
 define COMP_WORDBREAKS
  	
@@ -142,7 +144,7 @@ OSH = /home/czg/.oh-my-bash
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1409
+SSH_AGENT_PID = 1254
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -162,7 +164,7 @@ AMENT_PREFIX_PATH = /opt/ros/rolling
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/czg/.config/Code/CachedData/899d46d82c4c95423fb7e10e68eba52050e30ba3
+VSCODE_CODE_CACHE_PATH = /home/czg/.config/Code/CachedData/f80445acd5a3dadef24aa209168452a3d97cc326
 # environment
 LOGNAME = czg
 # environment
@@ -190,9 +192,11 @@ QT_IM_MODULE = ibus
 # environment
 SHLVL = 1
 # environment
+RCUTILS_CONSOLE_OUTPUT_FORMAT = [{severity} {time}] [{name}]: {message} ({function_name}() at {file_name}:{line_number})
+# environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-5d6bd868-1a2c-41ff-9081-a90b1a256037.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-86b2d859-13c8-4b54-bceb-1d759a0b0888.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -218,7 +222,7 @@ MAKE_COMMAND := make
 # environment
 LANGUAGE = en_US:en
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-f4aa4c3f-1.63.2-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-f4aa4c3f-1.64.2-main.sock
 # environment
 PYTHONPATH = /opt/ros/rolling/lib/python3.8/site-packages
 # makefile
@@ -233,8 +237,6 @@ BREAKPAD_DUMP_LOCATION = /home/czg/.config/Code/exthost Crash Reports
 ROS_VERSION = 2
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
-# environment
-TMUX = /tmp//tmux-1000/default,26940,0
 # environment
 GDK_BACKEND = x11
 # environment
@@ -262,22 +264,24 @@ PAGER = less
 # environment
 LC_ALL = C
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/6b7cbfce_f51f_4ebe_b7a3_b158571262d7
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/02e0f42d_586e_4ec0_812a_7826439996bb
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.3522
+GNOME_TERMINAL_SERVICE = :1.538
 # default
 SUFFIXES := 
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
- 
 GAZEBO_MODEL_PATH = :/opt/ros/rolling/share/turtlebot3_gazebo/models
 # environment
 WINDOWPATH = 2
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+ 
+make: *** No rule to make target 'all'.  Stop.
+ 
 # environment
 HISTIGNORE = &:[ ]*:exit:ls:bg:fg:history:clear
 # environment
@@ -291,9 +295,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 27197
+VSCODE_PID = 9480
 # variable set hash-table stats:
-# Load=138/1024=13%, Rehash=0, Collisions=24/160=15%
+# Load=140/1024=14%, Rehash=0, Collisions=25/162=15%
 
 # Pattern-specific Variable Values
 
@@ -301,9 +305,9 @@ VSCODE_PID = 27197
 
 # Directories
 
-# . (device 66310, inode 4070661): 4 files, no impossibilities.
+# . (device 66310, inode 4070661): 12 files, no impossibilities.
 
-# 4 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -353,12 +357,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 12 / storage = 103 B / avg = 8 B
-# current buf: size = 8162 B / used = 103 B / count = 12 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 20 / storage = 155 B / avg = 7 B
+# current buf: size = 8162 B / used = 155 B / count = 20 / avg = 7 B
 
-# strcache performance: lookups = 15 / hit rate = 20%
+# strcache performance: lookups = 23 / hit rate = 13%
 # hash-table stats:
-# Load=12/8192=0%, Rehash=0, Collisions=1/15=7%
-# Finished Make data base on Tue Feb  8 13:32:46 2022
+# Load=20/8192=0%, Rehash=0, Collisions=1/23=4%
+# Finished Make data base on Wed Feb 16 10:09:34 2022
 
  

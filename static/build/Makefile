@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/czg/cpp_learning/static
+CMAKE_SOURCE_DIR = /home/czg/cpp_c_learning/static
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/czg/cpp_learning/static/build
+CMAKE_BINARY_DIR = /home/czg/cpp_c_learning/static/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/czg/cpp_learning/static/build/CMakeFiles /home/czg/cpp_learning/static/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/czg/cpp_c_learning/static/build/CMakeFiles /home/czg/cpp_c_learning/static/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/czg/cpp_learning/static/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/czg/cpp_c_learning/static/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,6 +111,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named bind_3
+
+# Build rule for target.
+bind_3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bind_3
+.PHONY : bind_3
+
+# fast build rule for target.
+bind_3/fast:
+	$(MAKE) -f CMakeFiles/bind_3.dir/build.make CMakeFiles/bind_3.dir/build
+.PHONY : bind_3/fast
+
+#=============================================================================
+# Target rules for targets named bind_2
+
+# Build rule for target.
+bind_2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bind_2
+.PHONY : bind_2
+
+# fast build rule for target.
+bind_2/fast:
+	$(MAKE) -f CMakeFiles/bind_2.dir/build.make CMakeFiles/bind_2.dir/build
+.PHONY : bind_2/fast
+
+#=============================================================================
+# Target rules for targets named bind_1
+
+# Build rule for target.
+bind_1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bind_1
+.PHONY : bind_1
+
+# fast build rule for target.
+bind_1/fast:
+	$(MAKE) -f CMakeFiles/bind_1.dir/build.make CMakeFiles/bind_1.dir/build
+.PHONY : bind_1/fast
+
+#=============================================================================
 # Target rules for targets named bind
 
 # Build rule for target.
@@ -122,6 +161,60 @@ bind: cmake_check_build_system
 bind/fast:
 	$(MAKE) -f CMakeFiles/bind.dir/build.make CMakeFiles/bind.dir/build
 .PHONY : bind/fast
+
+src/class_no_static.o: src/class_no_static.cpp.o
+
+.PHONY : src/class_no_static.o
+
+# target to build an object file
+src/class_no_static.cpp.o:
+	$(MAKE) -f CMakeFiles/bind_2.dir/build.make CMakeFiles/bind_2.dir/src/class_no_static.cpp.o
+.PHONY : src/class_no_static.cpp.o
+
+src/class_no_static.i: src/class_no_static.cpp.i
+
+.PHONY : src/class_no_static.i
+
+# target to preprocess a source file
+src/class_no_static.cpp.i:
+	$(MAKE) -f CMakeFiles/bind_2.dir/build.make CMakeFiles/bind_2.dir/src/class_no_static.cpp.i
+.PHONY : src/class_no_static.cpp.i
+
+src/class_no_static.s: src/class_no_static.cpp.s
+
+.PHONY : src/class_no_static.s
+
+# target to generate assembly for a file
+src/class_no_static.cpp.s:
+	$(MAKE) -f CMakeFiles/bind_2.dir/build.make CMakeFiles/bind_2.dir/src/class_no_static.cpp.s
+.PHONY : src/class_no_static.cpp.s
+
+src/class_static.o: src/class_static.cpp.o
+
+.PHONY : src/class_static.o
+
+# target to build an object file
+src/class_static.cpp.o:
+	$(MAKE) -f CMakeFiles/bind_1.dir/build.make CMakeFiles/bind_1.dir/src/class_static.cpp.o
+.PHONY : src/class_static.cpp.o
+
+src/class_static.i: src/class_static.cpp.i
+
+.PHONY : src/class_static.i
+
+# target to preprocess a source file
+src/class_static.cpp.i:
+	$(MAKE) -f CMakeFiles/bind_1.dir/build.make CMakeFiles/bind_1.dir/src/class_static.cpp.i
+.PHONY : src/class_static.cpp.i
+
+src/class_static.s: src/class_static.cpp.s
+
+.PHONY : src/class_static.s
+
+# target to generate assembly for a file
+src/class_static.cpp.s:
+	$(MAKE) -f CMakeFiles/bind_1.dir/build.make CMakeFiles/bind_1.dir/src/class_static.cpp.s
+.PHONY : src/class_static.cpp.s
 
 src/sign.o: src/sign.cpp.o
 
@@ -150,6 +243,33 @@ src/sign.cpp.s:
 	$(MAKE) -f CMakeFiles/bind.dir/build.make CMakeFiles/bind.dir/src/sign.cpp.s
 .PHONY : src/sign.cpp.s
 
+src/static_class_member.o: src/static_class_member.cpp.o
+
+.PHONY : src/static_class_member.o
+
+# target to build an object file
+src/static_class_member.cpp.o:
+	$(MAKE) -f CMakeFiles/bind_3.dir/build.make CMakeFiles/bind_3.dir/src/static_class_member.cpp.o
+.PHONY : src/static_class_member.cpp.o
+
+src/static_class_member.i: src/static_class_member.cpp.i
+
+.PHONY : src/static_class_member.i
+
+# target to preprocess a source file
+src/static_class_member.cpp.i:
+	$(MAKE) -f CMakeFiles/bind_3.dir/build.make CMakeFiles/bind_3.dir/src/static_class_member.cpp.i
+.PHONY : src/static_class_member.cpp.i
+
+src/static_class_member.s: src/static_class_member.cpp.s
+
+.PHONY : src/static_class_member.s
+
+# target to generate assembly for a file
+src/static_class_member.cpp.s:
+	$(MAKE) -f CMakeFiles/bind_3.dir/build.make CMakeFiles/bind_3.dir/src/static_class_member.cpp.s
+.PHONY : src/static_class_member.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -157,11 +277,23 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... bind_3"
+	@echo "... bind_2"
+	@echo "... bind_1"
 	@echo "... rebuild_cache"
 	@echo "... bind"
+	@echo "... src/class_no_static.o"
+	@echo "... src/class_no_static.i"
+	@echo "... src/class_no_static.s"
+	@echo "... src/class_static.o"
+	@echo "... src/class_static.i"
+	@echo "... src/class_static.s"
 	@echo "... src/sign.o"
 	@echo "... src/sign.i"
 	@echo "... src/sign.s"
+	@echo "... src/static_class_member.o"
+	@echo "... src/static_class_member.i"
+	@echo "... src/static_class_member.s"
 .PHONY : help
 
 

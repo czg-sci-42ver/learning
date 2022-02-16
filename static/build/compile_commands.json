@@ -1,7 +1,22 @@
 [
 {
-  "directory": "/home/czg/cpp_learning/static/build",
-  "command": "/usr/bin/c++    -Wall -Wextra -O3   -std=gnu++17 -o CMakeFiles/bind.dir/src/sign.cpp.o -c /home/czg/cpp_learning/static/src/sign.cpp",
-  "file": "/home/czg/cpp_learning/static/src/sign.cpp"
+  "directory": "/home/czg/cpp_c_learning/static/build",
+  "command": "/usr/bin/c++    -Wall -Wextra -O3   -std=gnu++17 -o CMakeFiles/bind_3.dir/src/static_class_member.cpp.o -c /home/czg/cpp_c_learning/static/src/static_class_member.cpp",
+  "file": "/home/czg/cpp_c_learning/static/src/static_class_member.cpp"
+},
+{
+  "directory": "/home/czg/cpp_c_learning/static/build",
+  "command": "/usr/bin/c++    -Wall -Wextra -O3   -std=gnu++17 -o CMakeFiles/bind_2.dir/src/class_no_static.cpp.o -c /home/czg/cpp_c_learning/static/src/class_no_static.cpp",
+  "file": "/home/czg/cpp_c_learning/static/src/class_no_static.cpp"
+},
+{
+  "directory": "/home/czg/cpp_c_learning/static/build",
+  "command": "/usr/bin/c++    -Wall -Wextra -O3   -std=gnu++17 -o CMakeFiles/bind_1.dir/src/class_static.cpp.o -c /home/czg/cpp_c_learning/static/src/class_static.cpp",
+  "file": "/home/czg/cpp_c_learning/static/src/class_static.cpp"
+},
+{
+  "directory": "/home/czg/cpp_c_learning/static/build",
+  "command": "/usr/bin/c++    -Wall -Wextra -O3   -std=gnu++17 -o CMakeFiles/bind.dir/src/sign.cpp.o -c /home/czg/cpp_c_learning/static/src/sign.cpp",
+  "file": "/home/czg/cpp_c_learning/static/src/sign.cpp"
 }
 ]

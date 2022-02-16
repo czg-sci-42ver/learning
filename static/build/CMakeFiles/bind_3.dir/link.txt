@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -O3   CMakeFiles/bind_3.dir/src/static_class_member.cpp.o  -o bind_3 

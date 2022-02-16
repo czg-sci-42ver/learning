@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/czg/cpp_learning/static/src/sign.cpp
+/home/czg/cpp_c_learning/static/src/sign.cpp
 iostream
 -
 string

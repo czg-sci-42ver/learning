@@ -1,6 +1,6 @@
 make --dry-run --keep-going --print-directory
-make: Entering directory '/home/czg/cpp_learning'
-make: Leaving directory '/home/czg/cpp_learning'
+make: Entering directory '/home/czg/cpp_c_learning'
+make: Leaving directory '/home/czg/cpp_c_learning'
  
 make: *** No targets specified and no makefile found.  Stop.
  
