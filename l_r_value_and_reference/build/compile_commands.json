@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/czg/cpp_c_learning/l_r_value_and_reference/build",
+  "command": "/usr/bin/c++    -Wall -Wextra -O3   -std=gnu++17 -o CMakeFiles/bind.dir/src/test_2.cpp.o -c /home/czg/cpp_c_learning/l_r_value_and_reference/src/test_2.cpp",
+  "file": "/home/czg/cpp_c_learning/l_r_value_and_reference/src/test_2.cpp"
+}
+]

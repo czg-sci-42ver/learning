@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -O3   CMakeFiles/bind_2.dir/src/class_no_static.cpp.o  -o bind_2 
