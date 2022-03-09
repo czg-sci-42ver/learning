@@ -1,7 +1,7 @@
 [
 {
-  "directory": "/home/czg/cpp_learning/mutex/build",
-  "command": "/usr/bin/c++    -Wall -Wextra -pthread -O3   -std=gnu++17 -o CMakeFiles/bind.dir/src/sign.cpp.o -c /home/czg/cpp_learning/mutex/src/sign.cpp",
-  "file": "/home/czg/cpp_learning/mutex/src/sign.cpp"
+  "directory": "/home/czg/cpp_c_learning/mutex/build",
+  "command": "/usr/bin/c++    -Wall -Wextra -pthread -O3   -std=gnu++17 -o CMakeFiles/bind.dir/src/sign.cpp.o -c /home/czg/cpp_c_learning/mutex/src/sign.cpp",
+  "file": "/home/czg/cpp_c_learning/mutex/src/sign.cpp"
 }
 ]

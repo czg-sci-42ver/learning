@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -O3   CMakeFiles/bind1.dir/src/sign.cpp.o  -o bind1  -lstdc++fs 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -O3   CMakeFiles/cast.dir/src/cast.cpp.o  -o cast 

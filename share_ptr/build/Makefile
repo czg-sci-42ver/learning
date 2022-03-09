@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/czg/cpp_c_learning/share_ptr/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +111,57 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named bind
+# Target rules for targets named bind1
 
 # Build rule for target.
-bind: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bind
-.PHONY : bind
+bind1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bind1
+.PHONY : bind1
 
 # fast build rule for target.
-bind/fast:
-	$(MAKE) -f CMakeFiles/bind.dir/build.make CMakeFiles/bind.dir/build
-.PHONY : bind/fast
+bind1/fast:
+	$(MAKE) -f CMakeFiles/bind1.dir/build.make CMakeFiles/bind1.dir/build
+.PHONY : bind1/fast
+
+#=============================================================================
+# Target rules for targets named cast
+
+# Build rule for target.
+cast: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cast
+.PHONY : cast
+
+# fast build rule for target.
+cast/fast:
+	$(MAKE) -f CMakeFiles/cast.dir/build.make CMakeFiles/cast.dir/build
+.PHONY : cast/fast
+
+src/cast.o: src/cast.cpp.o
+
+.PHONY : src/cast.o
+
+# target to build an object file
+src/cast.cpp.o:
+	$(MAKE) -f CMakeFiles/cast.dir/build.make CMakeFiles/cast.dir/src/cast.cpp.o
+.PHONY : src/cast.cpp.o
+
+src/cast.i: src/cast.cpp.i
+
+.PHONY : src/cast.i
+
+# target to preprocess a source file
+src/cast.cpp.i:
+	$(MAKE) -f CMakeFiles/cast.dir/build.make CMakeFiles/cast.dir/src/cast.cpp.i
+.PHONY : src/cast.cpp.i
+
+src/cast.s: src/cast.cpp.s
+
+.PHONY : src/cast.s
+
+# target to generate assembly for a file
+src/cast.cpp.s:
+	$(MAKE) -f CMakeFiles/cast.dir/build.make CMakeFiles/cast.dir/src/cast.cpp.s
+.PHONY : src/cast.cpp.s
 
 src/sign.o: src/sign.cpp.o
 
@@ -129,7 +169,7 @@ src/sign.o: src/sign.cpp.o
 
 # target to build an object file
 src/sign.cpp.o:
-	$(MAKE) -f CMakeFiles/bind.dir/build.make CMakeFiles/bind.dir/src/sign.cpp.o
+	$(MAKE) -f CMakeFiles/bind1.dir/build.make CMakeFiles/bind1.dir/src/sign.cpp.o
 .PHONY : src/sign.cpp.o
 
 src/sign.i: src/sign.cpp.i
@@ -138,7 +178,7 @@ src/sign.i: src/sign.cpp.i
 
 # target to preprocess a source file
 src/sign.cpp.i:
-	$(MAKE) -f CMakeFiles/bind.dir/build.make CMakeFiles/bind.dir/src/sign.cpp.i
+	$(MAKE) -f CMakeFiles/bind1.dir/build.make CMakeFiles/bind1.dir/src/sign.cpp.i
 .PHONY : src/sign.cpp.i
 
 src/sign.s: src/sign.cpp.s
@@ -147,7 +187,7 @@ src/sign.s: src/sign.cpp.s
 
 # target to generate assembly for a file
 src/sign.cpp.s:
-	$(MAKE) -f CMakeFiles/bind.dir/build.make CMakeFiles/bind.dir/src/sign.cpp.s
+	$(MAKE) -f CMakeFiles/bind1.dir/build.make CMakeFiles/bind1.dir/src/sign.cpp.s
 .PHONY : src/sign.cpp.s
 
 # Help Target
@@ -156,9 +196,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... bind"
+	@echo "... bind1"
+	@echo "... edit_cache"
+	@echo "... cast"
+	@echo "... src/cast.o"
+	@echo "... src/cast.i"
+	@echo "... src/cast.s"
 	@echo "... src/sign.o"
 	@echo "... src/sign.i"
 	@echo "... src/sign.s"

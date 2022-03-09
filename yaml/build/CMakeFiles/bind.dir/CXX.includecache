@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/czg/cpp_c_learning/yaml/include/sign.h
+algorithm
+-
+cctype
+-
+iostream
+-
+string
+-
+vector
+-
+
+/home/czg/cpp_c_learning/yaml/src/sign.cpp
+../include/sign.h
+/home/czg/cpp_c_learning/yaml/include/sign.h
+

@@ -1,7 +1,12 @@
 [
 {
   "directory": "/home/czg/cpp_c_learning/share_ptr/build",
-  "command": "/usr/bin/c++    -Wall -Wextra -O3   -std=gnu++17 -o CMakeFiles/bind.dir/src/sign.cpp.o -c /home/czg/cpp_c_learning/share_ptr/src/sign.cpp",
+  "command": "/usr/bin/c++    -Wall -Wextra -O3   -std=gnu++17 -o CMakeFiles/bind1.dir/src/sign.cpp.o -c /home/czg/cpp_c_learning/share_ptr/src/sign.cpp",
   "file": "/home/czg/cpp_c_learning/share_ptr/src/sign.cpp"
+},
+{
+  "directory": "/home/czg/cpp_c_learning/share_ptr/build",
+  "command": "/usr/bin/c++    -Wall -Wextra -O3   -std=gnu++17 -o CMakeFiles/cast.dir/src/cast.cpp.o -c /home/czg/cpp_c_learning/share_ptr/src/cast.cpp",
+  "file": "/home/czg/cpp_c_learning/share_ptr/src/cast.cpp"
 }
 ]

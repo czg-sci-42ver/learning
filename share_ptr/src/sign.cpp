@@ -31,9 +31,12 @@ main()
 
   // being explicit with the type of `sp2`
   std::shared_ptr<C> sp2 = std::make_shared<C>(2, 3.0f); // overload (1)
+  std::shared_ptr<C> sp3 = sp2;
   static_assert(std::is_same_v<decltype(sp2), std::shared_ptr<C>>);
   static_assert(std::is_same_v<decltype(sp1), decltype(sp2)>);
-  std::cout << "sp2-> i:" << sp2->i << ", f:" << sp2->f << " \n";
+  sp3->f = 5;
+  std::cout << "sp2-> i:" << sp2->i << ", f:" << sp2->f << sp2 << " \n";
+  std::cout << "sp2-> i:" << sp3->i << ", f:" << sp3->f << sp3 << " \n";
 
   // #ifdef __cpp_lib_shared_ptr_arrays
   //   // shared_ptr to a value-initialized float[64]; overload (2):

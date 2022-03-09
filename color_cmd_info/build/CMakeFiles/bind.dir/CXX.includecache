@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/czg/cpp_c_learning/color_cmd_info/include/sign.h
+ostream
+-
+
+/home/czg/cpp_c_learning/color_cmd_info/src/sign.cpp
+../include/sign.h
+/home/czg/cpp_c_learning/color_cmd_info/include/sign.h
+iostream
+-
+

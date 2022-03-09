@@ -1,0 +1,3 @@
+/home/czg/cpp_c_learning/protected_member/build/CMakeFiles/edit_cache.dir
+/home/czg/cpp_c_learning/protected_member/build/CMakeFiles/rebuild_cache.dir
+/home/czg/cpp_c_learning/protected_member/build/CMakeFiles/bind.dir

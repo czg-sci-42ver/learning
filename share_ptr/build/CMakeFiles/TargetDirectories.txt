@@ -1,3 +1,4 @@
-/home/czg/cpp_c_learning/share_ptr/build/CMakeFiles/edit_cache.dir
 /home/czg/cpp_c_learning/share_ptr/build/CMakeFiles/rebuild_cache.dir
-/home/czg/cpp_c_learning/share_ptr/build/CMakeFiles/bind.dir
+/home/czg/cpp_c_learning/share_ptr/build/CMakeFiles/bind1.dir
+/home/czg/cpp_c_learning/share_ptr/build/CMakeFiles/edit_cache.dir
+/home/czg/cpp_c_learning/share_ptr/build/CMakeFiles/cast.dir

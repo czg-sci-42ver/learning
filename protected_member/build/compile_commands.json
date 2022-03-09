@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/czg/cpp_c_learning/protected_member/build",
+  "command": "/usr/bin/c++    -Wall -Wextra -O3   -std=gnu++17 -o CMakeFiles/bind.dir/src/sign.cpp.o -c /home/czg/cpp_c_learning/protected_member/src/sign.cpp",
+  "file": "/home/czg/cpp_c_learning/protected_member/src/sign.cpp"
+}
+]

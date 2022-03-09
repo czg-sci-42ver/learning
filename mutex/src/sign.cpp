@@ -2,10 +2,21 @@
 #include <mutex>
 #include <thread>
 
-int g_i = 0;
-std::mutex czg_g_i_mutex; // protects g_i
+class test_mutex
+{
+public:
+  int g_i = 0;
+  std::mutex czg_g_i_mutex; // protects g_i
+  void safe_increment();
+  std::thread member1Thread()
+  {
+    return std::thread(&test_mutex::safe_increment, this);
+  };
+};
 
-void safe_increment() {
+void
+test_mutex::safe_increment()
+{
   const std::lock_guard<std::mutex> lock(czg_g_i_mutex);
   ++g_i;
 
@@ -16,14 +27,17 @@ void safe_increment() {
   // goes out of scope
 }
 
-int main() {
-  std::cout << "g_i: " << g_i << "; in main()\n";
+int
+main()
+{
+  test_mutex test;
+  std::cout << "g_i: " << test.g_i << "; in main()\n";
 
-  std::thread t1(safe_increment);
-  std::thread t2(safe_increment);
+  std::thread t1 = test.member1Thread();
+  std::thread t2 = test.member1Thread();
 
   t1.join();
   t2.join();
 
-  std::cout << "g_i: " << g_i << "; in main()\n";
+  std::cout << "g_i: " << test.g_i << "; in main()\n";
 }
