@@ -1,6 +1,7 @@
 #include <iostream>
 #include <mutex>
 #include <thread>
+#include <vector>
 
 class test_mutex
 {
@@ -21,6 +22,7 @@ public:
 
 private:
   const int* test_i;
+  std::vector<std::pair<int, std::vector<double>>> dist_theta_sets;
 };
 
 void
@@ -41,6 +43,12 @@ main()
 {
   test_mutex test;
   test.init();
+  std::vector<double> temp_vec;
+  std::cout << "czg_test" << temp_vec.size() << '\n' << std::endl;
+  temp_vec.clear();
+  double i = 1;
+  temp_vec.push_back(12);
+  std::cout << "czg_test" << temp_vec.at(0) << i << '\n' << std::endl;
   // std::cout << "czg_test" << test. << '\n' << std::endl;
   // test_mutex*
 
