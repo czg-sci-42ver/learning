@@ -12,6 +12,15 @@ public:
   {
     return std::thread(&test_mutex::safe_increment, this);
   };
+  void init()
+  {
+    int temp = 2;
+    test_i = static_cast<const int*>(&temp);
+    std::cout << "czg_test" << *test_i << '\n' << std::endl;
+  }
+
+private:
+  const int* test_i;
 };
 
 void
@@ -31,6 +40,10 @@ int
 main()
 {
   test_mutex test;
+  test.init();
+  // std::cout << "czg_test" << test. << '\n' << std::endl;
+  // test_mutex*
+
   std::cout << "g_i: " << test.g_i << "; in main()\n";
 
   std::thread t1 = test.member1Thread();
