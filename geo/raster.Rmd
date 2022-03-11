@@ -1,0 +1,95 @@
+---
+title: "raster"
+date: Feb-15
+---
+
+```{r}
+raster_need <- require("raster")
+
+# https://hohenfeld.is/posts/check-if-a-package-is-installed-in-r/
+if (!raster_need) {
+    #    install.packages("pacman")
+    install.packages("raster")
+}
+# library("pacman")
+# p_load("raster")
+library(raster)
+
+# library(raster)
+```
+
+```{r}
+## Loading required package: sp
+# RasterLayer with the default parameters
+x <- raster()
+x
+
+## class      : RasterLayer
+## dimensions : 180, 360, 64800  (nrow, ncol, ncell)
+## resolution : 1, 1  (x, y)
+## extent     : -180, 180, -90, 90  (xmin, xmax, ymin, ymax)
+## crs        : +proj=longlat +datum=WGS84 +no_defs
+res(x)
+```
+```{r}
+
+x <- raster(ncol = 36, nrow = 18, xmn = -1000, xmx = 1000, ymn = -100, ymx = 900)
+x
+res(x)
+```
+
+```{r}
+res(x) <- 100
+res(x)
+x
+ncol(x)
+## [1] 20
+ncol(x) <- 18
+ncol(x)
+## [1] 18
+res(x)
+## [1] 111.1111 100.0000
+projection(x) <- "+proj=utm +zone=48 +datum=WGS84"
+x
+# plot(x, main = "Raster with 100 cells")
+```
+
+```{r}
+r <- raster(ncol = 10, nrow = 10)
+ncell(r)
+## [1] 100
+hasValues(r)
+## [1] FALSE
+values(r) <- 1:ncell(r)
+plot(r, main = "Raster with 100 cells")
+```
+
+```{r}
+set.seed(0)
+values(r) <- runif(ncell(r))
+values(r)
+# punif(values(r)) == values(r)
+# qunif(values(r))
+# qunif(0.5)
+hasValues(r)
+## [1] TRUE
+inMemory(r)
+## [1] TRUE
+values(r)[1:10]
+##  [1] 0.8966972 0.2655087 0.3721239 0.5728534 0.9082078 0.2016819 0.8983897
+##  [8] 0.9446753 0.6607978 0.6291140
+plot(r, main = "Raster with 100 cells")
+```
+
+```{r}
+filename <- system.file("external/test.grd", package = "raster")
+filename
+r <- raster(filename)
+filename(r)
+## [1] "C:\\soft\\R\\R-devel\\library\\raster\\external\\test.grd"
+hasValues(r)
+## [1] TRUE
+inMemory(r)
+## [1] FALSE
+plot(r, main = "RasterLayer from file")
+```
