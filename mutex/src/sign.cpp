@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 #include <mutex>
 #include <thread>
 #include <vector>
@@ -18,13 +19,21 @@ public:
     int temp = 2;
     test_i = static_cast<const int*>(&temp);
     std::cout << "czg_test" << *test_i << '\n' << std::endl;
+    test_share = std::make_shared<int>(1);
   }
+  std::shared_ptr<int>& get_ptr() { return test_share; }
 
 private:
   const int* test_i;
   std::vector<std::pair<int, std::vector<double>>> dist_theta_sets;
+  std::shared_ptr<int> test_share;
 };
 
+// void
+// set_test_share(std::shared_ptr<int>& in)
+// {
+
+// }
 void
 test_mutex::safe_increment()
 {
@@ -53,6 +62,10 @@ main()
   // test_mutex*
 
   std::cout << "g_i: " << test.g_i << "; in main()\n";
+
+  std::shared_ptr<int> test2 = test.get_ptr();
+  *test2 = 3;
+  std::cout << "czg_test" << *test.get_ptr() << '\n' << std::endl;
 
   std::thread t1 = test.member1Thread();
   std::thread t2 = test.member1Thread();

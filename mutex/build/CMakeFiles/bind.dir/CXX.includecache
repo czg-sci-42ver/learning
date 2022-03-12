@@ -9,6 +9,8 @@
 /home/czg/cpp_c_learning/mutex/src/sign.cpp
 iostream
 -
+memory
+-
 mutex
 -
 thread
