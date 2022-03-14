@@ -1,0 +1,11 @@
+- [xapth](https://courses.ischool.berkeley.edu/i290-14/s05/lecture-4/allslides.html)
+  - [detailed](https://www.w3.org/TR/1999/REC-xpath-19991116/#dt-string-**value**) or [wikipedia](https://en.wikipedia.org/wiki/XPath)
+    - notice XPath Functions can be put in **Predicates**
+    - [function](https://developer.mozilla.org/en-US/docs/Web/XPath/Comparison_with_CSS_selectors)
+- [css selector](https://www.w3.org/TR/selectors-3/)
+  - [simplified](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+  - [use '[]'](https://thecssworkshop.com/lessons/attribute-selectors)
+  - [list](https://www.w3schools.com/cssref/css_selectors.asp)
+  - [parsel](https://parsel.readthedocs.io/en/latest/usage.html#variables-in-xpath-expressions)
+- [exlst](http://exslt.org/set/functions/difference/index.html)
+- [comparison of xpath and css](https://developer.mozilla.org/en-US/docs/Web/XPath/Comparison_with_CSS_selectors)
