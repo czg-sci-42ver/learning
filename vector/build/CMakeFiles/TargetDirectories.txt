@@ -1,0 +1,3 @@
+/home/czg/cpp_c_learning/vector/build/CMakeFiles/rebuild_cache.dir
+/home/czg/cpp_c_learning/vector/build/CMakeFiles/edit_cache.dir
+/home/czg/cpp_c_learning/vector/build/CMakeFiles/Capacity.dir
