@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/czg/cpp_c_learning/max_pair_second/src/Capacity.cpp
+algorithm
+-
+iostream
+-
+string
+-
+vector
+-
+

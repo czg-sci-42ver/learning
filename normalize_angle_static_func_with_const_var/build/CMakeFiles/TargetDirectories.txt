@@ -1,0 +1,3 @@
+/home/czg/cpp_c_learning/static_func_with_const_var/build/CMakeFiles/rebuild_cache.dir
+/home/czg/cpp_c_learning/static_func_with_const_var/build/CMakeFiles/edit_cache.dir
+/home/czg/cpp_c_learning/static_func_with_const_var/build/CMakeFiles/Capacity.dir

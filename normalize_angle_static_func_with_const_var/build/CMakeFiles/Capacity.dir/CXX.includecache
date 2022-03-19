@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/czg/cpp_c_learning/static_func_with_const_var/src/Capacity.cpp
+algorithm
+-
+cmath
+-
+iostream
+-
+string
+-
+vector
+-
+
