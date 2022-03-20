@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/czg/cpp_c_learning/multiple_if_&_for_in_for/src/Capacity.cpp
+algorithm
+-
+iostream
+-
+string
+-
+vector
+-
+
