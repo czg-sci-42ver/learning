@@ -71,4 +71,8 @@ int main()
     };
     std::vector<int> i_list{5,8,0};
     for (int i{5}; i != 8; ++i) { std::cout << i << "! = " << factorial(i) << ";  "; }
+    
+    for (int i=0; i<5; i++) {
+        std::cout << " czg_test " << i%4 << '\n' << std::endl;
+    }
 }

@@ -1,0 +1,3 @@
+/home/czg/cpp_c_learning/inheritance_different_namespace/build/CMakeFiles/rebuild_cache.dir
+/home/czg/cpp_c_learning/inheritance_different_namespace/build/CMakeFiles/edit_cache.dir
+/home/czg/cpp_c_learning/inheritance_different_namespace/build/CMakeFiles/Capacity.dir
