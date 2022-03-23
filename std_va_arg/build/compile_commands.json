@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/czg/cpp_c_learning/std_va_arg/build",
+  "command": "/usr/bin/c++    -Wall -Wextra -pthread -O3   -std=gnu++17 -o CMakeFiles/Capacity.dir/src/Capacity.cpp.o -c /home/czg/cpp_c_learning/std_va_arg/src/Capacity.cpp",
+  "file": "/home/czg/cpp_c_learning/std_va_arg/src/Capacity.cpp"
+}
+]

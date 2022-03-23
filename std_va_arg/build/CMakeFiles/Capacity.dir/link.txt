@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -pthread -O3   CMakeFiles/Capacity.dir/src/Capacity.cpp.o  -o Capacity  -lstdc++fs 
