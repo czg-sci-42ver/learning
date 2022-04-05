@@ -6,16 +6,16 @@
 
 #IncludeRegexTransform: 
 
-/home/czg/cpp_c_learning/nest_exception/src/Capacity.cpp
+/home/czg/cpp_c_learning/output_file_name/src/Capacity.cpp
+exception
+-
+fstream
+-
 iostream
 -
 stdexcept
 -
-exception
--
 string
--
-fstream
 -
 vector
 -

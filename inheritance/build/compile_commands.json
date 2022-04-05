@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/czg/cpp_c_learning/inheritance/build",
+  "command": "/usr/bin/c++    -Wall -Wextra -pthread -g   -std=gnu++17 -o CMakeFiles/Capacity.dir/src/Capacity.cpp.o -c /home/czg/cpp_c_learning/inheritance/src/Capacity.cpp",
+  "file": "/home/czg/cpp_c_learning/inheritance/src/Capacity.cpp"
+}
+]

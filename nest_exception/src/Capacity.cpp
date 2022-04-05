@@ -3,7 +3,7 @@
 #include <exception>
 #include <string>
 #include <fstream>
- 
+#include <vector>
 // prints the explanatory string of an exception. If the exception is nested,
 // recurses to print the explanatory of the exception it holds
 void print_exception(const std::exception& e, int level =  0)
@@ -45,4 +45,9 @@ int main()
     } catch(const std::exception& e) {
         print_exception(e);
     }
+    std::vector<int> test;
+    std::cout << " czg_test " << test.size() << " "<<test.empty() << '\t' << std::endl;
+    test.clear();
+    test.reserve(2);
+    std::cout << " czg_test " << test.size() << " "<<test.empty() << '\t' << std::endl;
 }

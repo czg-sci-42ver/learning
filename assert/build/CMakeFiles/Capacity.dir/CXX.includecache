@@ -6,17 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/czg/cpp_c_learning/nest_exception/src/Capacity.cpp
+/home/czg/cpp_c_learning/assert/src/Capacity.cpp
+exception
+-
+fstream
+-
 iostream
 -
 stdexcept
 -
-exception
--
 string
 -
-fstream
--
 vector
+-
+cassert
 -
 
