@@ -1,0 +1,1 @@
+try {document.getElementById('infoReadNum').innerHTML='12387';}catch (e) {}try {document.getElementById('infoReplyNum').innerHTML='0';}catch (e) {}

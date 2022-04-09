@@ -1,0 +1,3 @@
+- [numpy vector similar to std::vector in cpp](https://stackoverflow.com/questions/70738748/is-there-a-numpy-equivalent-of-c-stdvector-reserve-push-back-and-shrink)
+  -   change `dtype`
+- [for loop append number string](https://stackoverflow.com/questions/52499991/how-to-append-a-integer-iteration-into-a-string-in-python)
