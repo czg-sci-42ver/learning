@@ -1,0 +1,3 @@
+/home/czg/cpp_c_learning/calc_func_run_time/build/CMakeFiles/rebuild_cache.dir
+/home/czg/cpp_c_learning/calc_func_run_time/build/CMakeFiles/edit_cache.dir
+/home/czg/cpp_c_learning/calc_func_run_time/build/CMakeFiles/Capacity.dir

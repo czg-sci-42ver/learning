@@ -49,6 +49,8 @@ main()
   int a = 1;
   int b =2;
   std::cout << " czg_test " << std::numeric_limits<float>::min() << '\t' << std::endl;
+
+  std::cout << " czg_test " << 1/2*2 << '\t' << std::endl;
   assert(a == b && "A is not equal to B");
-  
+ 
 }

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/czg/cpp_c_learning/deleted_private_member/src/Capacity.cpp
+chrono
+-
+cmath
+-
+cstdarg
+-
+cstddef
+-
+cstdint
+-
+iostream
+-
+typeinfo
+-
+
