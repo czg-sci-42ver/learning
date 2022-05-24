@@ -1,3 +1,5 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    // "python.venvFolders": ["~/.virtualenvs/main_dev/"],
+    // "python.envFile": "${workspaceFolder}/main.env",
 }
