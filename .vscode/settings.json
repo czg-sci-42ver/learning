@@ -1,5 +1,6 @@
 {
     "git.ignoreLimitWarning": true,
+    "python.formatting.provider": "black",
     // "python.venvFolders": ["~/.virtualenvs/main_dev/"],
     // "python.envFile": "${workspaceFolder}/main.env",
 }
