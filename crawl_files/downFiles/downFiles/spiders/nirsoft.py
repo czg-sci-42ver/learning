@@ -12,6 +12,10 @@ class NirsoftSpider(CrawlSpider):
     # https://www.stt.msu.edu/users/pszhong/Generalized-Inverse-and-Projectors-C.R.Rao_Book_Appendix.pdf
     start_urls = ['https://www.stt.msu.edu/users/pszhong/']
 
+    custom_settings = {
+        'RETRY_TIMES': 0,
+    }
+
     rules = (
         Rule(LinkExtractor(deny=[r".*\.tar\.gz",r".*\.zip"],allow=''), callback='parse_item',  follow=True),
         # important to use deny
