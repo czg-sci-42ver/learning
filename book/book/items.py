@@ -1,14 +1,9 @@
-# Define here the models for your scraped items
-#
-# See documentation in:
-# https://docs.scrapy.org/en/latest/topics/items.html
-
 import scrapy
-
-
-class BookItem(scrapy.Item):
+ 
+class DownFilesItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    Title = scrapy.Field()
+    #pass
+    #file_urls用来存放要下载的文件url地址
     file_urls = scrapy.Field()
     files = scrapy.Field()
