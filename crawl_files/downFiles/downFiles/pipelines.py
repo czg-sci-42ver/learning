@@ -23,8 +23,9 @@ class DownfilesPipeline(FilesPipeline):
     def file_path(self, request, response=None, info=None, *, item=None):
         print("file_path ",urlparse(request.url).path)
         # print("file_pathfile_path ",item.get('original_file_name')) 
-        # 
+        # not use item,which may not exist 
         return basename(urlparse(request.url).path)
+        # return item.get('original_file_name')
 
     # def file_path(self, request, response=None, info=None):
     #  # DEFAULT IMPLENTATION

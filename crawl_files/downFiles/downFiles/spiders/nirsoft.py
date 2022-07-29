@@ -14,6 +14,7 @@ class NirsoftSpider(CrawlSpider):
 
     rules = (
         Rule(LinkExtractor(deny=[r".*\.tar\.gz",r".*\.zip"],allow=''), callback='parse_item',  follow=True),
+        # important to use deny
         # Rule(LinkExtractor(allow=''), callback='parse_item',  follow=True),
     )
 
@@ -38,6 +39,7 @@ class NirsoftSpider(CrawlSpider):
     def parse_item(self, response):
         file_urls = response.css('a[href]::attr(href)').extract()
         for file_url in file_urls:
+            # important to use this loop and continue to crawl all href on one html
         # file_url = response.css('a[href]::attr(href)').get()
             file_url = response.urljoin(file_url)
             print(file_url)

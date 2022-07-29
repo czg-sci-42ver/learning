@@ -72,6 +72,9 @@ ITEM_PIPELINES = {
     # 'scrapy.pipelines.files.FilesPipeline': 1,
 }
 
+DOWNFILESPIPELINE_FILES_RESULT_FIELD = 'files'
+DOWNFILESPIPELINE_FILES_URLS_FIELD = 'file_urls'
+
 FILES_STORE = "pdfs"
 
 DEFAULT_REQUEST_HEADERS = {
